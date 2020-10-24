@@ -1,25 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
+void calc(double num1, char op, double num2);
 int main()
 {
-    double num1, num2;
-    char op;
-    printf("Enter a Number: ");
-    scanf("%lf", &num1);
-    printf("Enter operator(+ / * -): ");
-    scanf(" %c", &op); // space %c
-    printf("Enter second Number: ");
-    scanf("%lf", &num2);
+    char operator;
+    double number1;
+    double number2;
+    printf("Number1: ");
+    scanf("%lf", &number1);
+    printf("Operator(+ - / *): ");
+    scanf(" %c", &operator);
+    printf("Number2: ");
+    scanf("%lf", &number2);
+    calc(number1, operator, number2);
+    return 0;
+}
+void calc(double num1, char op, double num2)
+{
     if (op == '+') {
         printf("%f\n", num1 + num2);
-    } else if (op == '-'){
+    } else if (op == '-') {
         printf("%f\n", num1 - num2);
     } else if (op == '/') {
-        printf("%f\n", num1/num2);
+        printf("%f\n", num1 / num2);
     } else if (op == '*') {
-        printf("%f\n", num1 * num2);
+        printf("%f", num1 * num2);
     } else {
-        printf("Something went wrong!");
+        printf("invalid operator");
     }
-    return 0;
 }
