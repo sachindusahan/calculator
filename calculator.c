@@ -24,7 +24,7 @@ void calc(double num1, char op, double num2)
     } else if (op == '/') {
         printf("%f\n", num1 / num2);
     } else if (op == '*') {
-        printf("%f", num1 * num2);
+        printf("%f\n", num1 * num2);
     } else {
         printf("invalid operator");
     }
